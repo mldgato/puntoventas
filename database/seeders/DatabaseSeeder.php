@@ -30,5 +30,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\Rack::factory(20)->create();
         \App\Models\Measure::factory(7)->create();
         \App\Models\Product::factory(100)->create();
+
+        $this->call(BuySeeder::class);
     }
 }

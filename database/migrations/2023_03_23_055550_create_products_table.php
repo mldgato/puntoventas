@@ -19,7 +19,6 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('brand');
             $table->integer('quantity');
-            $table->double('cost');
             $table->double('price');
             $table->unsignedBigInteger('supplier_id');
             $table->unsignedBigInteger('measure_id');

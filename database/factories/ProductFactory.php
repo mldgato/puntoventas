@@ -17,15 +17,12 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
-        $cost = $this->faker->randomFloat(2, 1, 5000);
-        $price = ($cost * 0.10) + $cost;
         return [
             'cod' => $this->faker->unique()->numberBetween(10001, 99999),
             'name' => $this->faker->sentence(), 
             'brand' => $this->faker->word(25), 
             'quantity' => $this->faker->numberBetween(1, 1000),
-            'cost' => $cost,
-            'price' => $price,
+            'price' => $this->faker->randomFloat(2, 1, 5000),
             'supplier_id' => Supplier::all()->random()->id,
             'measure_id' => Measure::all()->random()->id,
             'warehouse_id' => Warehouse::all()->random()->id,

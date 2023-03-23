@@ -1,9 +1,7 @@
 
 
-
-
 <?php $__env->startSection('content_header'); ?>
-    <h1>Dashboard</h1>
+    <h1>Proveedores <i class="fas fa-people-carry"></i></h1>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
@@ -14,7 +12,7 @@
     <div class="d-flex justify-content-end">
         <b>Version</b> 1.3
     </div>
-    <strong>Sistema de Puntos de Venta. </strong>Todos los derechos reservados © 2022 - <?php echo e(date('Y')); ?>.
+    <strong>Sistema de Puntos de Venta. Todos los derechos reservados © 2022 - <?php echo e(date('Y')); ?>. </strong>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('css'); ?>
@@ -24,4 +22,4 @@
 <?php $__env->startSection('js'); ?>
     
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('adminlte::page', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\puntoventas\resources\views/admin/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('adminlte::page', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\puntoventas\resources\views/admin/stocktaking/suppliers/index.blade.php ENDPATH**/ ?>
