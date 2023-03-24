@@ -5,18 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Buy extends Model
+class Buydetail extends Model
 {
     use HasFactory;
     protected $guarded = ['id', 'create_at', 'update_at'];
+
     //Relación uno a muchos inversa
-    public function supplier()
+    public function buy()
     {
-        return $this->belongsTo(Supplier::class);
+        return $this->belongsTo(Buy::class);
     }
-    //Relación uno a muchos
-    public function buydetails()
+    public function product()
     {
-        return $this->hasMany(Buydetail::class);
+        return $this->belongsTo(Product::class);
     }
 }

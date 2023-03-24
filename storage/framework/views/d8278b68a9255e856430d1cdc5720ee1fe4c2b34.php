@@ -5,7 +5,21 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
-    <p>Welcome to this beautiful admin panel.</p>
+    <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('admin.stocktaking.suppliers.show-suppliers')->html();
+} elseif ($_instance->childHasBeenRendered('xiOXTxo')) {
+    $componentId = $_instance->getRenderedChildComponentId('xiOXTxo');
+    $componentTag = $_instance->getRenderedChildComponentTagName('xiOXTxo');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('xiOXTxo');
+} else {
+    $response = \Livewire\Livewire::mount('admin.stocktaking.suppliers.show-suppliers');
+    $html = $response->html();
+    $_instance->logRenderedChild('xiOXTxo', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('footer'); ?>

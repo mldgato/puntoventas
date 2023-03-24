@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-    @livewire('admin.classroom.cycles.show-cycles')
+    @livewire('admin.stocktaking.suppliers.show-suppliers')
 @stop
 
 @section('footer')

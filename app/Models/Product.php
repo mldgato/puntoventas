@@ -31,9 +31,9 @@ class Product extends Model
     {
         return $this->morphOne(Image::class, 'imageable');
     }
-    //Relación muchos a muchos
-    public function buys()
+    //Relación uno a muchos
+    public function buydetails()
     {
-        return $this->belongsToMany(Buy::class);
+        return $this->hasMany(Buydetail::class);
     }
 }
