@@ -60,7 +60,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::4tWeb6wStzeppIEA',
+            '_route' => 'generated::xHpKThuqK2RTwBjH',
           ),
           1 => NULL,
           2 => 
@@ -170,7 +170,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::isuxioq2OmRDubtI',
+            '_route' => 'generated::FdVWujO83iFq8WiJ',
           ),
           1 => NULL,
           2 => 
@@ -227,7 +227,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::f8SEbvx8I46xzGIF',
+            '_route' => 'generated::gb1wSonxw8BXw9gL',
           ),
           1 => NULL,
           2 => 
@@ -300,7 +300,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::fTe6uEMzcmurnCAx',
+            '_route' => 'generated::j93plACoeRZOhcCp',
           ),
           1 => NULL,
           2 => 
@@ -430,7 +430,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::8qcZf7pj8TUrfzeu',
+            '_route' => 'generated::Ws2lLDb610fM67jo',
           ),
           1 => NULL,
           2 => 
@@ -469,7 +469,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::QKYrn0tN1PrLKAzD',
+            '_route' => 'generated::j2lm1qy2vB1EUDh7',
           ),
           1 => NULL,
           2 => 
@@ -508,7 +508,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::w6HEzOY44VTZhgQ4',
+            '_route' => 'generated::BdUJ7hzVnimqFoiI',
           ),
           1 => NULL,
           2 => 
@@ -528,7 +528,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::hT16eCXRd3WVFk2T',
+            '_route' => 'generated::LDQrJUyi9jVgXqfA',
           ),
           1 => NULL,
           2 => 
@@ -548,7 +548,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::PJQYmxBSylzINiha',
+            '_route' => 'generated::cD8TVXyc7peSGkv8',
           ),
           1 => NULL,
           2 => 
@@ -568,7 +568,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::ZDi6MqIQjTXQe87C',
+            '_route' => 'generated::8vaoh56vMKvYzCqZ',
           ),
           1 => NULL,
           2 => 
@@ -629,6 +629,86 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'admin.stocktaking.suppliers.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/measures' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.stocktaking.measures.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/warehouses' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.stocktaking.warehouses.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/racks' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.stocktaking.racks.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/products' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.stocktaking.products.index',
           ),
           1 => NULL,
           2 => 
@@ -830,7 +910,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::4tWeb6wStzeppIEA' => 
+    'generated::xHpKThuqK2RTwBjH' => 
     array (
       'methods' => 
       array (
@@ -853,7 +933,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::4tWeb6wStzeppIEA',
+        'as' => 'generated::xHpKThuqK2RTwBjH',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1099,7 +1179,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::isuxioq2OmRDubtI' => 
+    'generated::FdVWujO83iFq8WiJ' => 
     array (
       'methods' => 
       array (
@@ -1121,7 +1201,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::isuxioq2OmRDubtI',
+        'as' => 'generated::FdVWujO83iFq8WiJ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1213,7 +1293,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::f8SEbvx8I46xzGIF' => 
+    'generated::gb1wSonxw8BXw9gL' => 
     array (
       'methods' => 
       array (
@@ -1236,7 +1316,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::f8SEbvx8I46xzGIF',
+        'as' => 'generated::gb1wSonxw8BXw9gL',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1368,7 +1448,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::fTe6uEMzcmurnCAx' => 
+    'generated::j93plACoeRZOhcCp' => 
     array (
       'methods' => 
       array (
@@ -1391,7 +1471,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::fTe6uEMzcmurnCAx',
+        'as' => 'generated::j93plACoeRZOhcCp',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1644,7 +1724,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::8qcZf7pj8TUrfzeu' => 
+    'generated::Ws2lLDb610fM67jo' => 
     array (
       'methods' => 
       array (
@@ -1667,7 +1747,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::8qcZf7pj8TUrfzeu',
+        'as' => 'generated::Ws2lLDb610fM67jo',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1723,7 +1803,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::QKYrn0tN1PrLKAzD' => 
+    'generated::j2lm1qy2vB1EUDh7' => 
     array (
       'methods' => 
       array (
@@ -1744,7 +1824,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::QKYrn0tN1PrLKAzD',
+        'as' => 'generated::j2lm1qy2vB1EUDh7',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1885,7 +1965,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::w6HEzOY44VTZhgQ4' => 
+    'generated::BdUJ7hzVnimqFoiI' => 
     array (
       'methods' => 
       array (
@@ -1897,7 +1977,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
-        'as' => 'generated::w6HEzOY44VTZhgQ4',
+        'as' => 'generated::BdUJ7hzVnimqFoiI',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1913,7 +1993,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::hT16eCXRd3WVFk2T' => 
+    'generated::LDQrJUyi9jVgXqfA' => 
     array (
       'methods' => 
       array (
@@ -1925,7 +2005,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
-        'as' => 'generated::hT16eCXRd3WVFk2T',
+        'as' => 'generated::LDQrJUyi9jVgXqfA',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1941,7 +2021,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::PJQYmxBSylzINiha' => 
+    'generated::cD8TVXyc7peSGkv8' => 
     array (
       'methods' => 
       array (
@@ -1956,15 +2036,15 @@ app('router')->setCompiledRoutes(
           0 => 'api',
           1 => 'auth:sanctum',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:295:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007d40000000000000000";}";s:4:"hash";s:44:"UWgBSP8Kd62Dl83jzDr47KDlQHogZyZiWioMv6zW2Po=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007d40000000000000000";}";s:4:"hash";s:44:"6bbwXou4G+cAP/EyuMiCs8tMWQ6Uv8s6jDWfMcED1IY=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::PJQYmxBSylzINiha',
+        'as' => 'generated::cD8TVXyc7peSGkv8',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1980,7 +2060,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ZDi6MqIQjTXQe87C' => 
+    'generated::8vaoh56vMKvYzCqZ' => 
     array (
       'methods' => 
       array (
@@ -1994,15 +2074,15 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:265:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:47:"function () {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:267:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:49:"function () {
     return \\view(\'auth.login\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007d60000000000000000";}";s:4:"hash";s:44:"PvpM4065AFTXQ4+j1bhzCb+Oz5eyvdUuNrPofyZqsMA=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007d60000000000000000";}";s:4:"hash";s:44:"i2M64nsDxsRfy2+SxYEH7trySMGn1wUKzOUXuHZhmnA=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::ZDi6MqIQjTXQe87C',
+        'as' => 'generated::8vaoh56vMKvYzCqZ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2035,9 +2115,9 @@ app('router')->setCompiledRoutes(
           2 => 'Laravel\\Jetstream\\Http\\Middleware\\AuthenticateSession',
           3 => 'verified',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:272:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:54:"function () {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:274:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:56:"function () {
         return \\view(\'dashboard\');
-    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007da0000000000000000";}";s:4:"hash";s:44:"oDyj+ZoDU5DdJoeuS9m1j6RyRxK8oUbQ/WqQCXFRRLw=";}}',
+    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007da0000000000000000";}";s:4:"hash";s:44:"bHsQatF95W+ZCOQdLUgRUsMYLYvSoQxbrvhUDN0pSUo=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -2114,13 +2194,169 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:290:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:72:"function () {
     return \\view(\'admin.stocktaking.suppliers.index\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007dc0000000000000000";}";s:4:"hash";s:44:"fWsQnfjn9l8CLRKoiWncgSjO2CVBot7/2dPJIIQK0r8=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007dc0000000000000000";}";s:4:"hash";s:44:"LnL2lOPf2UDJgXuJW7IRx7cBB8Qil1BILa9bk0NoGUU=";}}',
         'namespace' => NULL,
         'prefix' => 'admin',
         'where' => 
         array (
         ),
         'as' => 'admin.stocktaking.suppliers.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.stocktaking.measures.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/measures',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:289:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:71:"function () {
+    return \\view(\'admin.stocktaking.measures.index\');
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007de0000000000000000";}";s:4:"hash";s:44:"AXbdzFC5TeQzxUYsOeS0zVDVlpo9Om1OzL7Pq/iJfps=";}}',
+        'namespace' => NULL,
+        'prefix' => 'admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.stocktaking.measures.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.stocktaking.warehouses.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/warehouses',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:291:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:73:"function () {
+    return \\view(\'admin.stocktaking.warehouses.index\');
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007e00000000000000000";}";s:4:"hash";s:44:"3sroWixCm9t8JCCY2n5MVUJb1dEpKnXD7qQnPb+RFAw=";}}',
+        'namespace' => NULL,
+        'prefix' => 'admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.stocktaking.warehouses.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.stocktaking.racks.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/racks',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:286:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:68:"function () {
+    return \\view(\'admin.stocktaking.racks.index\');
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007e20000000000000000";}";s:4:"hash";s:44:"GRF0RrdjsQCzODiOL9hms43xJ0r4IHmHrtiVlJW7NXo=";}}',
+        'namespace' => NULL,
+        'prefix' => 'admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.stocktaking.racks.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.stocktaking.products.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/products',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:289:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:71:"function () {
+    return \\view(\'admin.stocktaking.products.index\');
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007e40000000000000000";}";s:4:"hash";s:44:"5q+WcPOqYNATFiV3m+Q0n01qpctnkL/zL4z02JBLJ0k=";}}',
+        'namespace' => NULL,
+        'prefix' => 'admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.stocktaking.products.index',
       ),
       'fallback' => false,
       'defaults' => 

@@ -125,6 +125,34 @@
             'route' => 'admin.stocktaking.suppliers.index',
             'icon_color' => 'primary',
           ),
+          1 => 
+          array (
+            'text' => 'Medidas',
+            'icon' => 'fas fa-ruler-horizontal',
+            'route' => 'admin.stocktaking.measures.index',
+            'icon_color' => 'primary',
+          ),
+          2 => 
+          array (
+            'text' => 'Bodegas',
+            'icon' => 'fas fa-warehouse',
+            'route' => 'admin.stocktaking.warehouses.index',
+            'icon_color' => 'primary',
+          ),
+          3 => 
+          array (
+            'text' => 'Estaterías',
+            'icon' => 'fas fa-cubes',
+            'route' => 'admin.stocktaking.racks.index',
+            'icon_color' => 'primary',
+          ),
+          4 => 
+          array (
+            'text' => 'Productos',
+            'icon' => 'fas fa-toolbox',
+            'route' => 'admin.stocktaking.products.index',
+            'icon_color' => 'primary',
+          ),
         ),
       ),
     ),
@@ -266,7 +294,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:ZeU/vfUDLypON+yIqRQ/cFleX/O/Vm4rXRIJ0uHpMqI=',
+    'key' => 'base64:u5gnYT1Arp1M2TfGCPH190VR/7H4a4LUOp0geJ+C0pA=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (

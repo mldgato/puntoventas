@@ -1,5 +1,5 @@
-<div wire:init="loadSuppliers">
-    <?php echo $__env->make('livewire.admin.stocktaking.suppliers.update-supplier', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<div wire:init="loadRacks">
+    <?php echo $__env->make('livewire.admin.stocktaking.racks.update-racks', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div class="card mb-3">
         <div class="card-header">
             <div class="row">
@@ -7,16 +7,16 @@
                     <div class="d-flex justify-content-end">
                         <?php
 if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('admin.stocktaking.suppliers.create-supplier')->html();
-} elseif ($_instance->childHasBeenRendered('l1761002728-0')) {
-    $componentId = $_instance->getRenderedChildComponentId('l1761002728-0');
-    $componentTag = $_instance->getRenderedChildComponentTagName('l1761002728-0');
+    $html = \Livewire\Livewire::mount('admin.stocktaking.racks.create-racks')->html();
+} elseif ($_instance->childHasBeenRendered('l2162186175-0')) {
+    $componentId = $_instance->getRenderedChildComponentId('l2162186175-0');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l2162186175-0');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('l1761002728-0');
+    $_instance->preserveRenderedChild('l2162186175-0');
 } else {
-    $response = \Livewire\Livewire::mount('admin.stocktaking.suppliers.create-supplier');
+    $response = \Livewire\Livewire::mount('admin.stocktaking.racks.create-racks');
     $html = $response->html();
-    $_instance->logRenderedChild('l1761002728-0', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('l2162186175-0', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -49,14 +49,14 @@ echo $html;
                 </div>
             </div>
         </div>
-        <?php if(count($suppliers)): ?>
+        <?php if(count($racks)): ?>
             <div class="card-body">
                 <table class="table table-striped table-hover table-bordered table-sm table-responsive">
                     <thead>
                         <tr>
-                            <th style="cursor: pointer" wire:click="order('company')">
-                                Compañía
-                                <?php if($sort == 'company'): ?>
+                            <th style="cursor: pointer" wire:click="order('estante')">
+                                Estantería
+                                <?php if($sort == 'estante'): ?>
                                     <?php if($direction == 'asc'): ?>
                                         <i class="fas fa-sort-up ml-4"></i>
                                     <?php else: ?>
@@ -66,45 +66,9 @@ echo $html;
                                     <i class="fas fa-sort ml-4"></i>
                                 <?php endif; ?>
                             </th>
-                            <th style="cursor: pointer" wire:click="order('taxnumber')">
-                                NIT
-                                <?php if($sort == 'taxnumber'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th style="cursor: pointer" class="d-none d-sm-table-cell" wire:click="order('address')">
-                                Dirección
-                                <?php if($sort == 'address'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('phone')">
-                                Teléfono.
-                                <?php if($sort == 'phone'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('seller')">
-                                Vendedor
-                                <?php if($sort == 'seller'): ?>
+                            <th style="cursor: pointer" wire:click="order('bodega')">
+                                Bodega
+                                <?php if($sort == 'bodega'): ?>
                                     <?php if($direction == 'asc'): ?>
                                         <i class="fas fa-sort-up ml-4"></i>
                                     <?php else: ?>
@@ -118,16 +82,13 @@ echo $html;
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $__currentLoopData = $suppliers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $supplier): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php $__currentLoopData = $racks; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rack): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
-                                <td><?php echo e($supplier->company); ?></td>
-                                <td><?php echo e($supplier->taxnumber); ?></td>
-                                <td class="d-none d-sm-table-cell"><?php echo e($supplier->address); ?></td>
-                                <td><?php echo e($supplier->phone); ?></td>
-                                <td><?php echo e($supplier->seller); ?></td>
+                                <td><?php echo e($rack->estante); ?></td>
+                                <td><?php echo e($rack->bodega); ?></td>
                                 <td class="text-right">
-                                    <button wire:click="edit(<?php echo e($supplier->id); ?>)" data-toggle="modal"
-                                        data-target="#UpdateNewSupplier" class="btn btn-primary btn-sm mr-2"><span
+                                    <button wire:click="edit(<?php echo e($rack->id); ?>)" data-toggle="modal"
+                                        data-target="#UpdateNewRack" class="btn btn-primary btn-sm mr-2"><span
                                             class="d-none d-lg-block"><i class="fas fa-edit fa-fw"></i>
                                             Editar</span><span class="d-lg-none"><i
                                                 class="fas fa-edit fa-fw"></i></span></button>
@@ -137,19 +98,16 @@ echo $html;
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th>Compañía</th>
-                            <th>NIT</th>
-                            <th class="d-none d-sm-table-cell">Dirección</th>
-                            <th>Teléfono</th>
-                            <th>Vendedor</th>
+                            <th>Estantería</th>
+                            <th>Bodega</th>
                             <th>&nbsp;</th>
                         </tr>
                     </tfoot>
                 </table>
             </div>
-            <?php if($suppliers->hasPages()): ?>
+            <?php if($racks->hasPages()): ?>
                 <div class="card-footer">
-                    <div class="d-flex justify-content-end"><?php echo e($suppliers->links()); ?></div>
+                    <div class="d-flex justify-content-end"><?php echo e($racks->links()); ?></div>
                 </div>
             <?php endif; ?>
         <?php else: ?>
@@ -176,4 +134,4 @@ echo $html;
         </script>
     <?php $__env->stopSection(); ?>
 </div>
-<?php /**PATH C:\xampp\htdocs\puntoventas\resources\views/livewire/admin/stocktaking/suppliers/show-suppliers.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\puntoventas\resources\views/livewire/admin/stocktaking/racks/show-racks.blade.php ENDPATH**/ ?>

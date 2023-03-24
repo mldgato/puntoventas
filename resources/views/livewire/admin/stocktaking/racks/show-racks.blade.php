@@ -1,11 +1,11 @@
-<div wire:init="loadSuppliers">
-    @include('livewire.admin.stocktaking.suppliers.update-supplier')
+<div wire:init="loadRacks">
+    @include('livewire.admin.stocktaking.racks.update-racks')
     <div class="card mb-3">
         <div class="card-header">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="d-flex justify-content-end">
-                        @livewire('admin.stocktaking.suppliers.create-supplier')
+                        @livewire('admin.stocktaking.racks.create-racks')
                     </div>
                 </div>
             </div>
@@ -35,14 +35,14 @@
                 </div>
             </div>
         </div>
-        @if (count($suppliers))
+        @if (count($racks))
             <div class="card-body">
                 <table class="table table-striped table-hover table-bordered table-sm table-responsive">
                     <thead>
                         <tr>
-                            <th style="cursor: pointer" wire:click="order('company')">
-                                Compañía
-                                @if ($sort == 'company')
+                            <th style="cursor: pointer" wire:click="order('estante')">
+                                Estantería
+                                @if ($sort == 'estante')
                                     @if ($direction == 'asc')
                                         <i class="fas fa-sort-up ml-4"></i>
                                     @else
@@ -52,45 +52,9 @@
                                     <i class="fas fa-sort ml-4"></i>
                                 @endif
                             </th>
-                            <th style="cursor: pointer" wire:click="order('taxnumber')">
-                                NIT
-                                @if ($sort == 'taxnumber')
-                                    @if ($direction == 'asc')
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    @else
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    @endif
-                                @else
-                                    <i class="fas fa-sort ml-4"></i>
-                                @endif
-                            </th>
-                            <th style="cursor: pointer" class="d-none d-sm-table-cell" wire:click="order('address')">
-                                Dirección
-                                @if ($sort == 'address')
-                                    @if ($direction == 'asc')
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    @else
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    @endif
-                                @else
-                                    <i class="fas fa-sort ml-4"></i>
-                                @endif
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('phone')">
-                                Teléfono.
-                                @if ($sort == 'phone')
-                                    @if ($direction == 'asc')
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    @else
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    @endif
-                                @else
-                                    <i class="fas fa-sort ml-4"></i>
-                                @endif
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('seller')">
-                                Vendedor
-                                @if ($sort == 'seller')
+                            <th style="cursor: pointer" wire:click="order('bodega')">
+                                Bodega
+                                @if ($sort == 'bodega')
                                     @if ($direction == 'asc')
                                         <i class="fas fa-sort-up ml-4"></i>
                                     @else
@@ -104,16 +68,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($suppliers as $supplier)
+                        @foreach ($racks as $rack)
                             <tr>
-                                <td>{{ $supplier->company }}</td>
-                                <td>{{ $supplier->taxnumber }}</td>
-                                <td class="d-none d-sm-table-cell">{{ $supplier->address }}</td>
-                                <td>{{ $supplier->phone }}</td>
-                                <td>{{ $supplier->seller }}</td>
+                                <td>{{ $rack->estante }}</td>
+                                <td>{{ $rack->bodega }}</td>
                                 <td class="text-right">
-                                    <button wire:click="edit({{ $supplier->id }})" data-toggle="modal"
-                                        data-target="#UpdateNewSupplier" class="btn btn-primary btn-sm mr-2"><span
+                                    <button wire:click="edit({{ $rack->id }})" data-toggle="modal"
+                                        data-target="#UpdateNewRack" class="btn btn-primary btn-sm mr-2"><span
                                             class="d-none d-lg-block"><i class="fas fa-edit fa-fw"></i>
                                             Editar</span><span class="d-lg-none"><i
                                                 class="fas fa-edit fa-fw"></i></span></button>
@@ -123,19 +84,16 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th>Compañía</th>
-                            <th>NIT</th>
-                            <th class="d-none d-sm-table-cell">Dirección</th>
-                            <th>Teléfono</th>
-                            <th>Vendedor</th>
+                            <th>Estantería</th>
+                            <th>Bodega</th>
                             <th>&nbsp;</th>
                         </tr>
                     </tfoot>
                 </table>
             </div>
-            @if ($suppliers->hasPages())
+            @if ($racks->hasPages())
                 <div class="card-footer">
-                    <div class="d-flex justify-content-end">{{ $suppliers->links() }}</div>
+                    <div class="d-flex justify-content-end">{{ $racks->links() }}</div>
                 </div>
             @endif
         @else
