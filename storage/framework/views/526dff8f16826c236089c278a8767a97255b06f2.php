@@ -25,7 +25,7 @@
                                     <span class="input-group-text"><i class="fas fa-ruler-combined"></i></span>
                                 </div>
                                 <input type="text" class="form-control" id="unit"
-                                    placeholder="Escriba el número de NIT de la compañía" wire:model="unit">
+                                    placeholder="Escriba la unidad de medida" wire:model="unit">
                             </div>
                             <?php $__errorArgs = ['unit'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');

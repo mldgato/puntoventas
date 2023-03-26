@@ -14,4 +14,9 @@ class Rack extends Model
     {
         return $this->hasMany(Product::class);
     }
+    //Relación uno a muchos inversa
+    public function warehouse()
+    {
+        return $this->belongsTo(Warehouse::class);
+    }
 }

@@ -133,4 +133,4 @@ class ShowSuppliers extends Component
             $this->emit('closeModalMessaje', 'Información actualizada', 'Proveedor actualizado exitosamente.', 'success', 'UpdateNewSupplier');
         }
     }
-}
+} 

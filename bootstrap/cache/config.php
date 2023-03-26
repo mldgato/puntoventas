@@ -130,28 +130,28 @@
             'text' => 'Medidas',
             'icon' => 'fas fa-ruler-horizontal',
             'route' => 'admin.stocktaking.measures.index',
-            'icon_color' => 'primary',
+            'icon_color' => 'secondary',
           ),
           2 => 
           array (
             'text' => 'Bodegas',
             'icon' => 'fas fa-warehouse',
             'route' => 'admin.stocktaking.warehouses.index',
-            'icon_color' => 'primary',
+            'icon_color' => 'success',
           ),
           3 => 
           array (
             'text' => 'Estaterías',
             'icon' => 'fas fa-cubes',
             'route' => 'admin.stocktaking.racks.index',
-            'icon_color' => 'primary',
+            'icon_color' => 'warning',
           ),
           4 => 
           array (
             'text' => 'Productos',
             'icon' => 'fas fa-toolbox',
             'route' => 'admin.stocktaking.products.index',
-            'icon_color' => 'primary',
+            'icon_color' => 'danger',
           ),
         ),
       ),

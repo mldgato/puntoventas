@@ -51,59 +51,64 @@ echo $html;
         </div>
         <?php if(count($warehouses)): ?>
             <div class="card-body">
-                <table class="table table-striped table-hover table-bordered table-sm table-responsive">
-                    <thead>
-                        <tr>
-                            <th style="cursor: pointer" wire:click="order('name')">
-                                Bodega
-                                <?php if($sort == 'name'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th style="cursor: pointer" class="d-none d-sm-table-cell" wire:click="order('address')">
-                                Dirección
-                                <?php if($sort == 'address'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $__currentLoopData = $warehouses; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $warehouse): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered table-sm">
+                        <thead>
                             <tr>
-                                <td><?php echo e($warehouse->name); ?></td>
-                                <td class="d-none d-sm-table-cell"><?php echo e($warehouse->address); ?></td>
-                                <td class="text-right">
-                                    <button wire:click="edit(<?php echo e($warehouse->id); ?>)" data-toggle="modal"
-                                        data-target="#UpdateNewWarehouse" class="btn btn-primary btn-sm mr-2"><span
-                                            class="d-none d-lg-block"><i class="fas fa-edit fa-fw"></i>
-                                            Editar</span><span class="d-lg-none"><i
-                                                class="fas fa-edit fa-fw"></i></span></button>
-                                </td>
+                                <th style="cursor: pointer" wire:click="order('name')">
+                                    Bodega
+                                    <?php if($sort == 'name'): ?>
+                                        <?php if($direction == 'asc'): ?>
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        <?php else: ?>
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <i class="fas fa-sort ml-4"></i>
+                                    <?php endif; ?>
+                                </th>
+                                <th style="cursor: pointer" class="d-none d-sm-table-cell"
+                                    wire:click="order('address')">
+                                    Dirección
+                                    <?php if($sort == 'address'): ?>
+                                        <?php if($direction == 'asc'): ?>
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        <?php else: ?>
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <i class="fas fa-sort ml-4"></i>
+                                    <?php endif; ?>
+                                </th>
+                                <th>&nbsp;</th>
                             </tr>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Bodega</th>
-                            <th class="d-none d-sm-table-cell">Dirección</th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </tfoot>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php $__currentLoopData = $warehouses; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $warehouse): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <tr>
+                                    <td><?php echo e($warehouse->name); ?></td>
+                                    <td class="d-none d-sm-table-cell"><?php echo e($warehouse->address); ?></td>
+                                    <td class="text-right">
+                                        <a href="<?php echo e(route('admin.stocktaking.warehouses.show', $warehouse->id)); ?>"
+                                            class="btn btn-success btn-sm mr-2" title="Productos"><i
+                                                class="fas fa-boxes"></i></a>
+
+                                        <button wire:click="edit(<?php echo e($warehouse->id); ?>)" data-toggle="modal"
+                                            data-target="#UpdateNewWarehouse" class="btn btn-primary btn-sm mr-2"
+                                            title="Editar"><i class="fas fa-edit fa-fw"></i></button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Bodega</th>
+                                <th class="d-none d-sm-table-cell">Dirección</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
             <?php if($warehouses->hasPages()): ?>
                 <div class="card-footer">

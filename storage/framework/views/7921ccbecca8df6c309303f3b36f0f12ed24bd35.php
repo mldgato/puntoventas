@@ -25,7 +25,7 @@
                                     <span class="input-group-text"><i class="fab fa-slack-hash"></i></span>
                                 </div>
                                 <input type="text" class="form-control" id="name"
-                                    placeholder="Escriba el número de NIT de la compañía" wire:model="name">
+                                    placeholder="Escriba el nombre de la bodega, ejemplo: Bodega 1" wire:model="name">
                             </div>
                             <?php $__errorArgs = ['name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -45,7 +45,7 @@ unset($__errorArgs, $__bag); ?>
                                     <span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
                                 </div>
                                 <input type="text" class="form-control" id="address"
-                                    placeholder="Escriba la dirección de la compañía" wire:model="address">
+                                    placeholder="Escriba la dirección de la bodega" wire:model="address">
                             </div>
                             <?php $__errorArgs = ['address'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');

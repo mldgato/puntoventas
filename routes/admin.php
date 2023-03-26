@@ -2,25 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\admin\SupplierController;
+use App\Http\Controllers\admin\MeasureController;
+use App\Http\Controllers\admin\WarehouseController;
+use App\Http\Controllers\admin\RackController;
+use App\Http\Controllers\admin\ProducController;
 
 Route::get('', [HomeController::class, 'index'])->name('admin.index');
 
-Route::get('suppliers', function () {
-    return view('admin.stocktaking.suppliers.index');
-})->name('admin.stocktaking.suppliers.index');
-
-Route::get('measures', function () {
-    return view('admin.stocktaking.measures.index');
-})->name('admin.stocktaking.measures.index');
-
-Route::get('warehouses', function () {
-    return view('admin.stocktaking.warehouses.index');
-})->name('admin.stocktaking.warehouses.index');
-
-Route::get('racks', function () {
-    return view('admin.stocktaking.racks.index');
-})->name('admin.stocktaking.racks.index');
-
-Route::get('products', function () {
-    return view('admin.stocktaking.products.index');
-})->name('admin.stocktaking.products.index');
+Route::resource('suppliers', SupplierController::class)->names('admin.stocktaking.suppliers');
+Route::resource('measures', MeasureController::class)->names('admin.stocktaking.measures');
+Route::resource('warehouses', WarehouseController::class)->names('admin.stocktaking.warehouses');
+Route::resource('racks', RackController::class)->names('admin.stocktaking.racks');
+Route::resource('products', ProducController::class)->names('admin.stocktaking.products');

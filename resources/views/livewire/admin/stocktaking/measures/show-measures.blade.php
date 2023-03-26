@@ -37,45 +37,47 @@
         </div>
         @if (count($measures))
             <div class="card-body">
-                <table class="table table-striped table-hover table-bordered table-sm table-responsive">
-                    <thead>
-                        <tr>
-                            <th style="cursor: pointer" wire:click="order('unit')">
-                                Unidad de medida
-                                @if ($sort == 'unit')
-                                    @if ($direction == 'asc')
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    @else
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    @endif
-                                @else
-                                    <i class="fas fa-sort ml-4"></i>
-                                @endif
-                            </th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($measures as $measure)
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered table-sm">
+                        <thead>
                             <tr>
-                                <td>{{ $measure->unit }}</td>
-                                <td class="text-right">
-                                    <button wire:click="edit({{ $measure->id }})" data-toggle="modal"
-                                        data-target="#UpdateNewMeasure" class="btn btn-primary btn-sm mr-2"><span
-                                            class="d-none d-lg-block"><i class="fas fa-edit fa-fw"></i>
-                                            Editar</span><span class="d-lg-none"><i
-                                                class="fas fa-edit fa-fw"></i></span></button>
-                                </td>
+                                <th style="cursor: pointer" wire:click="order('unit')">
+                                    Unidad de medida
+                                    @if ($sort == 'unit')
+                                        @if ($direction == 'asc')
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        @else
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        @endif
+                                    @else
+                                        <i class="fas fa-sort ml-4"></i>
+                                    @endif
+                                </th>
+                                <th>&nbsp;</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Unidad de medida</th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </tfoot>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($measures as $measure)
+                                <tr>
+                                    <td>{{ $measure->unit }}</td>
+                                    <td class="text-right">
+                                        <a href="{{ route('admin.stocktaking.measures.show', $measure->id) }}" class="btn btn-success btn-sm mr-2" title="Productos"><i class="fas fa-boxes"></i></a>
+
+                                        <button wire:click="edit({{ $measure->id }})" data-toggle="modal"
+                                            data-target="#UpdateNewMeasure" class="btn btn-primary btn-sm mr-2" title="Editar"><i
+                                            class="fas fa-edit fa-fw"></i></button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Unidad de medida</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
             @if ($measures->hasPages())
                 <div class="card-footer">

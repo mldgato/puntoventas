@@ -51,59 +51,61 @@ echo $html;
         </div>
         <?php if(count($racks)): ?>
             <div class="card-body">
-                <table class="table table-striped table-hover table-bordered table-sm table-responsive">
-                    <thead>
-                        <tr>
-                            <th style="cursor: pointer" wire:click="order('estante')">
-                                Estantería
-                                <?php if($sort == 'estante'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('bodega')">
-                                Bodega
-                                <?php if($sort == 'bodega'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $__currentLoopData = $racks; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rack): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered table-sm">
+                        <thead>
                             <tr>
-                                <td><?php echo e($rack->estante); ?></td>
-                                <td><?php echo e($rack->bodega); ?></td>
-                                <td class="text-right">
-                                    <button wire:click="edit(<?php echo e($rack->id); ?>)" data-toggle="modal"
-                                        data-target="#UpdateNewRack" class="btn btn-primary btn-sm mr-2"><span
-                                            class="d-none d-lg-block"><i class="fas fa-edit fa-fw"></i>
-                                            Editar</span><span class="d-lg-none"><i
-                                                class="fas fa-edit fa-fw"></i></span></button>
-                                </td>
+                                <th style="cursor: pointer" wire:click="order('estante')">
+                                    Estantería
+                                    <?php if($sort == 'estante'): ?>
+                                        <?php if($direction == 'asc'): ?>
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        <?php else: ?>
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <i class="fas fa-sort ml-4"></i>
+                                    <?php endif; ?>
+                                </th>
+                                <th style="cursor: pointer" wire:click="order('bodega')">
+                                    Bodega
+                                    <?php if($sort == 'bodega'): ?>
+                                        <?php if($direction == 'asc'): ?>
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        <?php else: ?>
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <i class="fas fa-sort ml-4"></i>
+                                    <?php endif; ?>
+                                </th>
+                                <th>&nbsp;</th>
                             </tr>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Estantería</th>
-                            <th>Bodega</th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </tfoot>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php $__currentLoopData = $racks; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rack): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <tr>
+                                    <td><?php echo e($rack->estante); ?></td>
+                                    <td><?php echo e($rack->bodega); ?></td>
+                                    <td class="text-right">
+                                        <a href="<?php echo e(route('admin.stocktaking.racks.show', $rack->id)); ?>" class="btn btn-success btn-sm mr-2" title="Productos"><i class="fas fa-boxes"></i></a>
+
+                                        <button wire:click="edit(<?php echo e($rack->id); ?>)" data-toggle="modal"
+                                            data-target="#UpdateNewRack" class="btn btn-primary btn-sm mr-2" title="Editar"><i
+                                            class="fas fa-edit fa-fw"></i></button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Estantería</th>
+                                <th>Bodega</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
             <?php if($racks->hasPages()): ?>
                 <div class="card-footer">

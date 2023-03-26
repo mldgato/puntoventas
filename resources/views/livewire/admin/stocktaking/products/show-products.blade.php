@@ -1,5 +1,5 @@
 <div wire:init="loadProducts">
-    {{-- @include('livewire.admin.stocktaking.products.update-product') --}}
+    @include('livewire.admin.stocktaking.products.update-product')
     <div class="card mb-3">
         <div class="card-header">
             <div class="row">
@@ -37,103 +37,123 @@
         </div>
         @if (count($products))
             <div class="card-body">
-                <table class="table table-striped table-hover table-bordered table-sm table-responsive">
-                    <thead>
-                        <tr>
-                            <th style="cursor: pointer" wire:click="order('cod')">
-                                cod.
-                                @if ($sort == 'cod')
-                                    @if ($direction == 'asc')
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    @else
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    @endif
-                                @else
-                                    <i class="fas fa-sort ml-4"></i>
-                                @endif
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('name')">
-                                Producto
-                                @if ($sort == 'name')
-                                    @if ($direction == 'asc')
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    @else
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    @endif
-                                @else
-                                    <i class="fas fa-sort ml-4"></i>
-                                @endif
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('brand')">
-                                Marca
-                                @if ($sort == 'brand')
-                                    @if ($direction == 'asc')
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    @else
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    @endif
-                                @else
-                                    <i class="fas fa-sort ml-4"></i>
-                                @endif
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('quantity')">
-                                Cantidad
-                                @if ($sort == 'quantity')
-                                    @if ($direction == 'asc')
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    @else
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    @endif
-                                @else
-                                    <i class="fas fa-sort ml-4"></i>
-                                @endif
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('price')">
-                                Precio
-                                @if ($sort == 'price')
-                                    @if ($direction == 'asc')
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    @else
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    @endif
-                                @else
-                                    <i class="fas fa-sort ml-4"></i>
-                                @endif
-                            </th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($products as $product)
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped table-hover table-bordered">
+                        <thead>
                             <tr>
-                                <td>{{ $product->cod }}</td>
-                                <td>{{ $product->name }}</td>
-                                <td>{{ $product->brand }}</td>
-                                <td>{{ $product->quantity }}</td>
-                                <td>{{ $product->price }}</td>
-                                
-                                <td class="text-right">
-                                    <button wire:click="edit({{ $product->id }})" data-toggle="modal"
-                                        data-target="#UpdateNewSupplier" class="btn btn-primary btn-sm mr-2"><span
-                                            class="d-none d-lg-block"><i class="fas fa-edit fa-fw"></i>
-                                            Editar</span><span class="d-lg-none"><i
-                                                class="fas fa-edit fa-fw"></i></span></button>
-                                </td>
+                                <th>&nbsp;</th>
+                                <th style="cursor: pointer" wire:click="order('cod')">
+                                    cod.
+                                    @if ($sort == 'cod')
+                                        @if ($direction == 'asc')
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        @else
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        @endif
+                                    @else
+                                        <i class="fas fa-sort ml-4"></i>
+                                    @endif
+                                </th>
+                                <th style="cursor: pointer" wire:click="order('name')">
+                                    Producto
+                                    @if ($sort == 'name')
+                                        @if ($direction == 'asc')
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        @else
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        @endif
+                                    @else
+                                        <i class="fas fa-sort ml-4"></i>
+                                    @endif
+                                </th>
+                                <th style="cursor: pointer" wire:click="order('brand')">
+                                    Marca
+                                    @if ($sort == 'brand')
+                                        @if ($direction == 'asc')
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        @else
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        @endif
+                                    @else
+                                        <i class="fas fa-sort ml-4"></i>
+                                    @endif
+                                </th>
+                                <th style="cursor: pointer" wire:click="order('quantity')">
+                                    Cant.
+                                    @if ($sort == 'quantity')
+                                        @if ($direction == 'asc')
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        @else
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        @endif
+                                    @else
+                                        <i class="fas fa-sort ml-4"></i>
+                                    @endif
+                                </th>
+                                <th style="cursor: pointer" wire:click="order('cost')">
+                                    Costo
+                                    @if ($sort == 'cost')
+                                        @if ($direction == 'asc')
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        @else
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        @endif
+                                    @else
+                                        <i class="fas fa-sort ml-4"></i>
+                                    @endif
+                                </th>
+                                <th style="cursor: pointer" wire:click="order('price')">
+                                    Precio
+                                    @if ($sort == 'price')
+                                        @if ($direction == 'asc')
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        @else
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        @endif
+                                    @else
+                                        <i class="fas fa-sort ml-4"></i>
+                                    @endif
+                                </th>
+                                <th>&nbsp;</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Cod.</th>
-                            <th>Producto</th>
-                            <th>Marca</th>
-                            <th>Cantidad</th>
-                            <th>Precio</th>
-                            <th>&nbsp;</th>
-                            
-                        </tr>
-                    </tfoot>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($products as $product)
+                                <tr class="{{ $product->claseFila }}">
+                                    <td class="align-middle" style="width: 100px; height=100px"><img class="img-fluid"
+                                            src="@if ($product->image) {{ Storage::url($product->image->url) }} @else https://cdn.pixabay.com/photo/2012/02/22/20/02/tools-15539_960_720.jpg @endif"
+                                            alt="">
+                                    </td>
+                                    <td class="align-middle">{{ $product->cod }}</td>
+                                    <td class="align-middle">{{ $product->name }}</td>
+                                    <td class="align-middle">{{ $product->brand }}</td>
+                                    <td class="align-middle">{{ $product->quantity }}</td>
+                                    <td class="align-middle">{{ $product->cost }}</td>
+                                    <td class="align-middle">{{ $product->price }}</td>
+
+                                    <td class="align-middle text-right">
+                                        <button wire:click="edit({{ $product->id }})" data-toggle="modal"
+                                            data-target=".UpdateWarehouse" class="btn btn-primary btn-sm mr-2"><i
+                                                class="fas fa-edit fa-fw"></i></button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>Cod.</th>
+                                <th>Producto</th>
+                                <th>Marca</th>
+                                <th>Cant.</th>
+                                <th>Costo</th>
+                                <th>Precio</th>
+                                <th>&nbsp;</th>
+
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
             @if ($products->hasPages())
                 <div class="card-footer">

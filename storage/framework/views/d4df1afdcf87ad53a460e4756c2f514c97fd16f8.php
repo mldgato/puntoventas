@@ -1,5 +1,5 @@
 <div wire:init="loadProducts">
-    
+    <?php echo $__env->make('livewire.admin.stocktaking.products.update-product', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div class="card mb-3">
         <div class="card-header">
             <div class="row">
@@ -51,103 +51,123 @@ echo $html;
         </div>
         <?php if(count($products)): ?>
             <div class="card-body">
-                <table class="table table-striped table-hover table-bordered table-sm table-responsive">
-                    <thead>
-                        <tr>
-                            <th style="cursor: pointer" wire:click="order('cod')">
-                                cod.
-                                <?php if($sort == 'cod'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('name')">
-                                Producto
-                                <?php if($sort == 'name'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('brand')">
-                                Marca
-                                <?php if($sort == 'brand'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('quantity')">
-                                Cantidad
-                                <?php if($sort == 'quantity'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th style="cursor: pointer" wire:click="order('price')">
-                                Precio
-                                <?php if($sort == 'price'): ?>
-                                    <?php if($direction == 'asc'): ?>
-                                        <i class="fas fa-sort-up ml-4"></i>
-                                    <?php else: ?>
-                                        <i class="fas fa-sort-down ml-4"></i>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <i class="fas fa-sort ml-4"></i>
-                                <?php endif; ?>
-                            </th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped table-hover table-bordered">
+                        <thead>
                             <tr>
-                                <td><?php echo e($product->cod); ?></td>
-                                <td><?php echo e($product->name); ?></td>
-                                <td><?php echo e($product->brand); ?></td>
-                                <td><?php echo e($product->quantity); ?></td>
-                                <td><?php echo e($product->price); ?></td>
-                                
-                                <td class="text-right">
-                                    <button wire:click="edit(<?php echo e($product->id); ?>)" data-toggle="modal"
-                                        data-target="#UpdateNewSupplier" class="btn btn-primary btn-sm mr-2"><span
-                                            class="d-none d-lg-block"><i class="fas fa-edit fa-fw"></i>
-                                            Editar</span><span class="d-lg-none"><i
-                                                class="fas fa-edit fa-fw"></i></span></button>
-                                </td>
+                                <th>&nbsp;</th>
+                                <th style="cursor: pointer" wire:click="order('cod')">
+                                    cod.
+                                    <?php if($sort == 'cod'): ?>
+                                        <?php if($direction == 'asc'): ?>
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        <?php else: ?>
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <i class="fas fa-sort ml-4"></i>
+                                    <?php endif; ?>
+                                </th>
+                                <th style="cursor: pointer" wire:click="order('name')">
+                                    Producto
+                                    <?php if($sort == 'name'): ?>
+                                        <?php if($direction == 'asc'): ?>
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        <?php else: ?>
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <i class="fas fa-sort ml-4"></i>
+                                    <?php endif; ?>
+                                </th>
+                                <th style="cursor: pointer" wire:click="order('brand')">
+                                    Marca
+                                    <?php if($sort == 'brand'): ?>
+                                        <?php if($direction == 'asc'): ?>
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        <?php else: ?>
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <i class="fas fa-sort ml-4"></i>
+                                    <?php endif; ?>
+                                </th>
+                                <th style="cursor: pointer" wire:click="order('quantity')">
+                                    Cant.
+                                    <?php if($sort == 'quantity'): ?>
+                                        <?php if($direction == 'asc'): ?>
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        <?php else: ?>
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <i class="fas fa-sort ml-4"></i>
+                                    <?php endif; ?>
+                                </th>
+                                <th style="cursor: pointer" wire:click="order('cost')">
+                                    Costo
+                                    <?php if($sort == 'cost'): ?>
+                                        <?php if($direction == 'asc'): ?>
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        <?php else: ?>
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <i class="fas fa-sort ml-4"></i>
+                                    <?php endif; ?>
+                                </th>
+                                <th style="cursor: pointer" wire:click="order('price')">
+                                    Precio
+                                    <?php if($sort == 'price'): ?>
+                                        <?php if($direction == 'asc'): ?>
+                                            <i class="fas fa-sort-up ml-4"></i>
+                                        <?php else: ?>
+                                            <i class="fas fa-sort-down ml-4"></i>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <i class="fas fa-sort ml-4"></i>
+                                    <?php endif; ?>
+                                </th>
+                                <th>&nbsp;</th>
                             </tr>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Cod.</th>
-                            <th>Producto</th>
-                            <th>Marca</th>
-                            <th>Cantidad</th>
-                            <th>Precio</th>
-                            <th>&nbsp;</th>
-                            
-                        </tr>
-                    </tfoot>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <tr class="<?php echo e($product->claseFila); ?>">
+                                    <td class="align-middle" style="width: 100px; height=100px"><img class="img-fluid"
+                                            src="<?php if($product->image): ?> <?php echo e(Storage::url($product->image->url)); ?> <?php else: ?> https://cdn.pixabay.com/photo/2012/02/22/20/02/tools-15539_960_720.jpg <?php endif; ?>"
+                                            alt="">
+                                    </td>
+                                    <td class="align-middle"><?php echo e($product->cod); ?></td>
+                                    <td class="align-middle"><?php echo e($product->name); ?></td>
+                                    <td class="align-middle"><?php echo e($product->brand); ?></td>
+                                    <td class="align-middle"><?php echo e($product->quantity); ?></td>
+                                    <td class="align-middle"><?php echo e($product->cost); ?></td>
+                                    <td class="align-middle"><?php echo e($product->price); ?></td>
+
+                                    <td class="align-middle text-right">
+                                        <button wire:click="edit(<?php echo e($product->id); ?>)" data-toggle="modal"
+                                            data-target=".UpdateWarehouse" class="btn btn-primary btn-sm mr-2"><i
+                                                class="fas fa-edit fa-fw"></i></button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>Cod.</th>
+                                <th>Producto</th>
+                                <th>Marca</th>
+                                <th>Cant.</th>
+                                <th>Costo</th>
+                                <th>Precio</th>
+                                <th>&nbsp;</th>
+
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
             <?php if($products->hasPages()): ?>
                 <div class="card-footer">

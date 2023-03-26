@@ -20,6 +20,7 @@ class CreateSuppliersTable extends Migration
             $table->string('address');
             $table->string('phone');
             $table->string('seller');
+            $table->enum('status', [0, 1])->default(1);
             $table->timestamps();
         });
     }
