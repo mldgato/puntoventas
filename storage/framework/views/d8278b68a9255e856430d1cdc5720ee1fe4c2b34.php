@@ -8,15 +8,15 @@
     <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('admin.stocktaking.suppliers.show-suppliers')->html();
-} elseif ($_instance->childHasBeenRendered('1q56ekh')) {
-    $componentId = $_instance->getRenderedChildComponentId('1q56ekh');
-    $componentTag = $_instance->getRenderedChildComponentTagName('1q56ekh');
+} elseif ($_instance->childHasBeenRendered('YQJN9Pn')) {
+    $componentId = $_instance->getRenderedChildComponentId('YQJN9Pn');
+    $componentTag = $_instance->getRenderedChildComponentTagName('YQJN9Pn');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('1q56ekh');
+    $_instance->preserveRenderedChild('YQJN9Pn');
 } else {
     $response = \Livewire\Livewire::mount('admin.stocktaking.suppliers.show-suppliers');
     $html = $response->html();
-    $_instance->logRenderedChild('1q56ekh', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('YQJN9Pn', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

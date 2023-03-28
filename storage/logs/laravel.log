@@ -21470,3 +21470,19 @@ Did you mean one of these?
 #58 C:\\xampp\\htdocs\\puntoventas\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #59 {main}
 "} 
+[2023-03-28 20:27:16] local.ERROR: The "--sedd" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--sedd\" option does not exist. at C:\\xampp\\htdocs\\puntoventas\\vendor\\symfony\\console\\Input\\ArgvInput.php:220)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\puntoventas\\vendor\\symfony\\console\\Input\\ArgvInput.php(149): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption('sedd', NULL)
+#1 C:\\xampp\\htdocs\\puntoventas\\vendor\\symfony\\console\\Input\\ArgvInput.php(82): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption('--sedd')
+#2 C:\\xampp\\htdocs\\puntoventas\\vendor\\symfony\\console\\Input\\ArgvInput.php(71): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('--sedd', true)
+#3 C:\\xampp\\htdocs\\puntoventas\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#4 C:\\xampp\\htdocs\\puntoventas\\vendor\\symfony\\console\\Command\\Command.php(257): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#5 C:\\xampp\\htdocs\\puntoventas\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#6 C:\\xampp\\htdocs\\puntoventas\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\xampp\\htdocs\\puntoventas\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\xampp\\htdocs\\puntoventas\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\xampp\\htdocs\\puntoventas\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 C:\\xampp\\htdocs\\puntoventas\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 C:\\xampp\\htdocs\\puntoventas\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 

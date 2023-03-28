@@ -288,7 +288,7 @@
     'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://localhost',
+    'url' => 'http://puntoventas.test',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
@@ -647,7 +647,7 @@
       array (
         'driver' => 'local',
         'root' => 'C:\\xampp\\htdocs\\puntoventas\\storage\\app/public',
-        'url' => 'http://localhost/storage',
+        'url' => 'http://puntoventas.test/storage',
         'visibility' => 'public',
       ),
       's3' => 
@@ -950,7 +950,7 @@
       2 => '127.0.0.1',
       3 => '127.0.0.1:8000',
       4 => '::1',
-      5 => 'localhost',
+      5 => 'puntoventas.test',
     ),
     'guard' => 
     array (
